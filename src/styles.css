@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0 0;
+    padding: 0 0;
+}
+/* INICIO  -  MENU */
+menu{
+    margin: 0 0;
+    padding: 0 0;
+    width: auto;
+    display: block;
+    line-height: 1.2;
+}
+menu ul{
+    width: auto;
+    display: block;
+    font-size: 0;
+    text-align: center;
+    color: #eeeeee;
+    background-color: #333333;
+    border: transparent;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 999999990;
+    border-radius: 3px;
+}
+menu li{
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+menu > ul > li > span, menu > ul > li > a{
+    font-size: 4vh;
+    color: #eeeeee !important;
+    text-decoration: none;
+    padding: 4vh 4vh;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+}
+menu li a{
+    color: #eeeeee;
+    animation: none;
+    text-decoration: none;
+}
+menu li:hover > span, menu li:hover > a, menu a:hover{
+    color: #333333;
+    background-color: #f3f3f3;
+    transition: all 0.18s;    
+}
+/* FIM  -  MENU */
+
+/* INICIO  -  FOOTER */
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333333;
+    color: #f3f3f3;
+    text-align: center;
+}
+/* FIM  -  FOOTER */
