@@ -1,6 +1,6 @@
-.logoSenac > img{
-    max-width: 30%;
+.logoDoeFacil > img{
     display: block;
+    /*max-width: 30%;
+    opacity: 0.7;*/
     margin: 5% auto;
-    opacity: 0.7;
 }
