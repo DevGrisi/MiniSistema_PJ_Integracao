@@ -1,23 +1,27 @@
 <menu>
   <ul>
     <li>
-      <span><a routerLink="/home">Home</a></span>
+      <span><a class="destaque-animado" routerLink="/home">Home</a></span>
     </li>
     <li>
-      <span><a routerLink="/doe-tambem">Doe Também</a></span>
+      <span><a class="destaque-animado" routerLink="/doe-tambem">Doe Também</a></span>
     </li>
     <li>
-      <span><a routerLink="/quem-somos">Quem Somos</a></span>
+      <span><a class="destaque-animado" routerLink="/quem-somos">Quem Somos</a></span>
     </li>
     <li>
-      <span><a routerLink="/contato">Contato</a></span>
+      <span><a class="destaque-animado" routerLink="/contato">Contato</a></span>
     </li>
   </ul>
 </menu>
-
-<main>
-  <router-outlet></router-outlet>
-</main>
+<nav id="logoDoeFacil">
+  <div class="logo-container">
+    <img src="/DoeFacil.jpeg" alt="DoeFacil" class="logo-img">
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+  </div>
+</nav>
 
 <footer>
   <p>© 2025 | TI-35 Senac Botucatu | Todos os direitos reservados</p>

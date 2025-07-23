@@ -1,6 +1,15 @@
-.logoDoeFacil > img{
-    display: block;
-    /*max-width: 30%;
-    opacity: 0.7;*/
-    margin: 5% auto;
-}
+
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Cor do texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Leve contorno */
+    width: 100%;
+    text-align: center;
+  }
+  .col, .row{
+    height: auto;
+  }
+  
