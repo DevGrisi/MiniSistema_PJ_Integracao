@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Item para Doação</title>
+</head>
+<body>
+  <form action="/cadastrar-item" method="POST" enctype="multipart/form-data">
+    <h2>Cadastro de Item para Doação</h2>
+
+    <!-- Informações do item -->
+    <label for="nome">Nome do item:</label>
+    <input type="text" id="nome" name="nome" required><br>
+
+    <label for="categoria">Categoria:</label>
+    <select id="categoria" name="categoria" required>
+      <option value="">Selecione</option>
+      <option value="roupas">Roupas</option>
+      <option value="alimentos">Alimentos</option>
+      <option value="moveis">Móveis</option>
+      <option value="eletronicos">Eletrônicos</option>
+      <option value="brinquedos">Brinquedos</option>
+      <option value="livros">Livros</option>
+      <option value="outros">Outros</option>
+    </select><br>
+
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" rows="4"></textarea><br>
+
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" name="quantidade" min="1" required><br>
+
+    <label for="estado">Estado de conservação:</label>
+    <select id="estado" name="estado" required>
+      <option value="novo">Novo</option>
+      <option value="bom">Usado - Bom estado</option>
+      <option value="marcas">Usado - Com marcas de uso</option>
+    </select><br>
+
+    <label for="fotos">Fotos do item:</label>
+    <input type="file" id="fotos" name="fotos[]" multiple accept="image/*"><br>
+
+    <!-- Localização -->
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" name="cidade" required><br>
+
+    <label for="estado_uf">Estado (UF):</label>
+    <input type="text" id="estado_uf" name="estado_uf" maxlength="2" required><br>
+
+    <label for="bairro">Bairro:</label>
+    <input type="text" id="bairro" name="bairro"><br>
+
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}"><br>
+
+    <label for="entrega">Forma de entrega:</label>
+    <select id="entrega" name="entrega" required>
+      <option value="retirada">Retirada no local</option>
+      <option value="ponto_coleta">Levarei a um ponto de coleta</option>
+      <option value="combinado">A combinar</option>
+    </select><br>
+
+    <!-- Disponibilidade -->
+    <label for="disponibilidade">Disponibilidade para retirada:</label>
+    <input type="text" id="disponibilidade" name="disponibilidade" placeholder="Ex: Seg a Sex, 9h às 18h"><br>
+
+    <!-- Expiração -->
+    <label for="data_expiracao">Este item tem prazo de validade?</label>
+    <input type="date" id="data_expiracao" name="data_expiracao"><br>
+
+    <button type="submit">Cadastrar Item</button>
+  </form>
+</body>
+</html>

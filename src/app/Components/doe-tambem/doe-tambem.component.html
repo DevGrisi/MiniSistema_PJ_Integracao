@@ -1,1 +1,82 @@
-<p>doe-tambem works!</p>
+<div class="container bg-primary text-white rounded p-5 mt-5 shadow">
+    <h3 class="text-center mb-4">Cadastro de Item para Doação</h3>
+  
+    <!-- Linha 1: Nome do item e Categoria -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="nome" class="form-label">Nome do item:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Nome do seu item..." required>
+      </div>
+      <div class="col-md-6">
+        <label for="categoria" class="form-label">Categoria:</label>
+        <select class="form-select" id="categoria" required>
+            <option selected>Selecione</option>
+            <option value="roupas">Roupas</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="moveis">Móveis</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="brinquedos">Brinquedos</option>
+            <option value="livros">Livros</option>
+            <option value="outros">Outros</option>
+        </select>
+      </div>
+    </div>
+  
+    <!-- Linha 2: Descrição -->
+    <div class="mb-3">
+      <label for="descricao" class="form-label">Descrição:</label>
+      <textarea class="form-control" id="descricao" rows="3" placeholder="Descrição do seu item..."></textarea>
+    </div>
+  
+    <!-- Linha 3: Quantidade e Conservação -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="quantidade" class="form-label">Quantidade:</label>
+        <input type="number" class="form-control" id="quantidade" required>
+      </div>
+      <div class="col-md-6">
+        <label for="conservacao" class="form-label">Conservação:</label>
+        <select class="form-select" id="conservacao" required>
+            <option selected>Selecione</option>
+            <option value="novo">Novo</option>
+            <option value="bom">Usado - Bom estado</option>
+            <option value="marcas">Usado - Com marcas de uso</option>
+        </select>
+      </div>
+    </div>
+  
+    <!-- Linha 4: Fotos -->
+    <div class="mb-3">
+      <label for="fotos" class="form-label">Fotos:</label>
+      <input type="file" class="form-control" id="fotos" multiple>
+    </div>
+  
+    <!-- Linha 5: Entrega e Disponibilidade -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="entrega" class="form-label">Entrega:</label>
+        <select class="form-select" id="entrega" required>
+            <option selected>Selecione</option>
+            <option value="retirada">Retirada no local</option>
+            <option value="ponto_coleta">Levarei a um ponto de coleta</option>
+            <option value="combinado">A combinar</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="disponibilidade" class="form-label">Disponibilidade:</label>
+        <input type="text" class="form-control" id="disponibilidade" placeholder="Seg a Sex, 9h às 18h">
+      </div>
+    </div>
+  
+    <!-- Linha 6: Validade -->
+    <div class="mb-4">
+      <label for="validade" class="form-label">Validade (30 dias por padrão):</label>
+      <input type="date" class="form-control" id="validade">
+    </div>
+  
+    <!-- Botão -->
+    <div class="text-center">
+      <button type="submit" class="btn btn-light px-4">Cadastrar Item</button>
+    </div>
+  </div>
+  
