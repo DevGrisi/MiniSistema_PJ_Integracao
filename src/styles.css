@@ -96,13 +96,16 @@ menu li:hover > span, menu li:hover > a, menu a:hover{
 
 /* INICIO  -  FOOTER */
 footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #333333;
-    color: #f3f3f3;
-    text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #9FD6CC;
+  color: #000000;
+  text-align: center;
+}
+footer > p{
+  font-size: 20px;
 }
 /* FIM  -  FOOTER */
 
