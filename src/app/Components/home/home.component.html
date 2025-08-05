@@ -41,6 +41,17 @@
                     </div>
                 </div>
             </div>
+                    <!-- Exibe um card para cada item cadastrado -->
+            <div class="col" *ngFor="let item of itensCadastrados">
+                <div class="card" style="width: 18rem;">
+                <img [src]="item.imagem" class="card-img-top" alt="Imagem do item">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.nome }}</h5>
+                    <p class="card-text">{{ item.descricao }}</p>
+                    <a href="#" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

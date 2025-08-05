@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common'; // ✅ Importa o módulo comum que contém *ngFor
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-/* inhx(num1: number, num2: number): number{    \
-    let resultado = num1 + num2;                 |> Classe que retorna algo
-    return resultado;                           /
+export class HomeComponent implements OnInit {
+  itensCadastrados: any[] = [];
+
+  ngOnInit(): void {
+    const dados = localStorage.getItem('itens');
+    this.itensCadastrados = dados ? JSON.parse(dados) : [];
   }
-*/
 }
