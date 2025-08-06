@@ -1,0 +1,19 @@
+.container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7b73ede0 !important;
+    height: auto;
+    min-height: 65vh;
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: white;
+}
+.quem-somos{
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    margin-top: 1rem;
+    color: palegreen;
+}

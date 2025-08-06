@@ -55,6 +55,7 @@ menu li:hover > span, menu li:hover > a, menu a:hover{
   text-shadow: 1px 1px 2px #505050;
   transition: all 0.18s;    
 }
+/*Destaque animado das palavras do menu*/
 .destaque-animado {
   position: relative;
   display: inline-block;
@@ -78,6 +79,9 @@ menu li:hover > span, menu li:hover > a, menu a:hover{
   transform: scaleX(1); /* Anima a marca ao passar o mouse */
 }
     
+/* FIM  -  MENU */
+
+/*Inicio Ajuste da logo de Background*/
 .logo-container {
   position: relative;
   display: flex;
@@ -92,7 +96,7 @@ menu li:hover > span, menu li:hover > a, menu a:hover{
   height: auto;
   display: block;
 }
-/* FIM  -  MENU */
+/*Fim do Ajuste da Logo*/
 
 /* INICIO  -  FOOTER */
 footer{
@@ -109,6 +113,7 @@ footer > p{
 }
 /* FIM  -  FOOTER */
 
+/*Ajuste dos itens para que fiquem sobrepostos a logo do background*/
 .overlay-content {
   position:absolute;
   top: 50%;

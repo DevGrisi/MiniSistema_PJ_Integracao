@@ -8,11 +8,26 @@ import { Component,AfterViewInit } from '@angular/core';
 })
 export class DoeTambemComponent implements AfterViewInit {
 
+  imagemBase64: string = ''; // Vai armazenar a imagem convertida
+  
   // Este método do Angular é executado quando a *view* (a parte HTML do componente) já foi totalmente carregada.
   ngAfterViewInit(): void {
-  
-    const botao = document.getElementById('btn-cadastrar');  // Captura o botão de cadastro pelo ID "btn-cadastrar"
+    const botao = document.getElementById('btn-cadastrar');
+    const inputFoto = document.getElementById('fotos') as HTMLInputElement;
 
+    // Leitor de imagem quando o usuário seleciona o arquivo
+    inputFoto?.addEventListener('change', () => {
+      const file = inputFoto.files?.[0];
+      if (file) {
+        const reader = new FileReader();
+
+        reader.onload = () => {
+          this.imagemBase64 = reader.result as string; // Salva a imagem base64 na variável
+        };
+
+        reader.readAsDataURL(file); // Lê a imagem como Data URL
+      }
+    });
     // Se o botão foi encontrado (evita erro caso não exista no DOM)
     if (botao) {
 
@@ -49,7 +64,7 @@ export class DoeTambemComponent implements AfterViewInit {
           entrega,
           disponibilidade,
           validade,
-          imagem: '/DoeFacil.jpeg' // Imagem padrão por enquanto
+          imagem: this.imagemBase64 || '/DoeFacil.jpeg' // Se não tiver imagem, usa padrão
         };
 
         // Busca os itens já salvos no localStorage (se houver)
@@ -70,6 +85,8 @@ export class DoeTambemComponent implements AfterViewInit {
         (document.getElementById("entrega") as HTMLSelectElement).value = "Selecione";
         (document.getElementById("disponibilidade") as HTMLInputElement).value = "";
         (document.getElementById("validade") as HTMLInputElement).value = "";
+        inputFoto.value = "";
+        this.imagemBase64 = "";
 
         // Se passou por todas as validações, exibe mensagem de sucesso
         alert("Seu item foi enviado, aguarde análise.");
